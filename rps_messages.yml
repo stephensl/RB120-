@@ -1,0 +1,76 @@
+ask_name: "Hello there! What should I call you?"
+invalid_name: "Sorry, must enter a name."
+welcome: "Welcome to Rock, Paper, Scissors, Lizard, Spock!"
+review_rules: "Would you like to review the rules before we start? (y/n)"
+display_rules: |
+  Here's how it works:
+
+    1. You will select your move: rock, paper, scissors, lizard, or spock.
+    2. Your opponent chooses a move.
+    3. Epic battle ensues...
+    4. Winner of the round is determined.
+    5. The first player to reach the target number of wins is crowned 'Champion!'
+
+    * Target number of wins is 5 by default, with the option to customize.
+
+
+  => Winning Combinations:
+
+    Rock     >   Scissors & Lizard
+    Paper    >   Rock & Spock
+    Scissors >   Paper & Lizard
+    Lizard   >   Paper & Spock
+    Spock    >   Scissors & Rock
+
+
+
+  => Press 'enter' to continue.
+choose_opponent: |
+  Please select your opponent:
+
+          1. R2D2
+          2. C3P0
+          3. Terminator
+
+  => Enter 1, 2, or 3:
+
+no_rules: "Sounds like you already know the rules, let's get started!"
+invalid_yes_no: "Invalid input. Please enter 'y' or 'n'."
+default_max: |
+ A champion is crowned when either player reaches a target number of wins.
+ 
+custom_max?: |
+          To set your own target win goal, enter a number between 1 and 25.
+
+          => Otherwise, press 'enter' to start the game!
+
+invalid_max: |
+  Invalid input: Enter a number between 1 and 25 or press 'enter'.
+invalid_opponent: "Invalid entry, must enter 1, 2, or 3."
+
+move_options: |
+  Please select your move from the following options:
+
+          1. Rock
+          2. Paper
+          3. Scissors
+          4. Lizard
+          5. Spock
+
+  => Enter 1, 2, 3, 4 or 5:
+
+invalid_move_choice: "Invalid move choice: must enter 1, 2, 3, 4, or 5."
+epic_battle: "Epic battle in progress.."
+scoreboard: |
+  **Scoreboard**
+  --------------
+game_review: |
+
+  Game Review:
+  ------------
+congrats: |
+         **************************************
+         Congratulations! You are the Champion!
+         **************************************
+ask_play_again?: "Would you like to play again? (y/n)"
+goodbye: "Thanks for playing! Good bye."
