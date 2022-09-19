@@ -76,7 +76,7 @@ module Displayable
       puts "Round #{idx + 1}:
         #{human.name} chose: #{move}
         #{computer.name} chose: #{computer.history[idx]}
-        Win?: #{move.beats(computer.history[idx])} "
+        Win?: #{move.victorious?(computer.history[idx])} "
     end
   end
 
@@ -154,66 +154,52 @@ module Moves
                                 'lizard' => 'is poisoned by',
                                 'spock' => 'meets his twin brother' } }
 
-  def beats(other_move)
-    @beats.include?(other_move)
+  def victorious?(other_move)
+    self.beats.include?(other_move)
   end
 
   def to_s
-    @name
+    self.name 
   end
+  
+  class AllMoves
+    attr_reader :name, :beats 
+    
+    include Moves 
+    
+    def initialize(name, beats)
+      @name = name 
+      @beats = beats
+    end 
+  end 
 
-  class Rock
-    attr_reader :name
-
-    include Moves
-
+  class Rock < AllMoves
     def initialize
-      @name = 'rock'
-      @beats = ['scissors', 'lizard']
+      super('rock', ['scissors', 'lizard'])
     end
   end
 
-  class Paper
-    attr_reader :name
-
-    include Moves
-
+  class Paper < AllMoves
     def initialize
-      @name = 'paper'
-      @beats = ['rock', 'spock']
+      super('paper', ['rock', 'spock'])
     end
   end
 
-  class Scissors
-    attr_reader :name
-
-    include Moves
-
+  class Scissors < AllMoves
     def initialize
-      @name = 'scissors'
-      @beats = ['paper', 'lizard']
+      super('scissors', ['paper', 'lizard'])
     end
   end
 
-  class Lizard
-    attr_reader :name
-
-    include Moves
-
+  class Lizard < AllMoves
     def initialize
-      @name = 'lizard'
-      @beats = ['paper', 'spock']
+      super('lizard', ['paper', 'spock'])
     end
   end
 
-  class Spock
-    attr_reader :name
-
-    include Moves
-
+  class Spock < AllMoves
     def initialize
-      @name = 'spock'
-      @beats = ['rock', 'scissors']
+      super('spock', ['rock', 'scissors'])
     end
   end
 end
@@ -394,9 +380,9 @@ module Referee
   end
 
   def determine_winner
-    if human.move.beats(computer.move.name)
+    if human.move.victorious?(computer.move.name)
       human
-    elsif computer.move.beats(human.move.name)
+    elsif computer.move.victorious?(human.move.name)
       computer
     end
   end
