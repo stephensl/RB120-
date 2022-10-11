@@ -1,0 +1,74 @@
+welcome: "Welcome to Tic-Tac-Toe, "
+ask_name: "Hello there! What should I call you?"
+invalid_name: "Sorry, must enter a name."
+review_rules: "Would you like to review the rules before we start? (y/n)"
+display_rules: |
+  ***************************************************************************
+  1. The game is played on a grid that's 3 squares by 3 squares.
+
+  2. You and your oppenent each choose a marker. 
+  
+  3. Players take turns putting their marks in empty squares.
+
+  4. The first player to get 3 of her marks in a row (up, down, across, or diagonally) wins.
+
+  5. When all 9 squares are full, the game is over. If no player has 3 marks in a row, it's a tie.
+    
+  * Source https://www.exploratorium.edu/brain_explorer/tictactoe.html
+  
+  ***************************************************************************
+    
+                                  
+                                  
+  => Press 'enter' to continue! 
+
+ask_marker: | 
+    In Tic-Tac-Toe, each player is identified with a marker (traditionally X's and O's).
+    
+    => In our game, you get to choose your own marker.
+    
+    => Choose your player marker. Enter any character ('X', 'O', '$', etc.) Then press 'enter'. 
+invalid_marker: |
+  Sorry, you must choose a single character to use as your marker.
+  
+  => Your marker must be different than your opponent's marker.
+  
+  => Enter any character ('X', 'O', '$', etc.) Then press 'enter'.
+
+choose_opponent: |
+  Please select your opponent:
+
+          1. R2D2 (easy)
+          2. C3P0 (medium)
+          3. Terminator (hard)
+
+  => Enter 1, 2, or 3:
+
+
+who_goes_first?: | 
+  
+
+  Would you like to move first or second?
+  
+    - Enter '1' to go first.
+    - Enter '2' to go second.
+invalid_goes_first: "Sorry, you must enter 1 or 2."
+scoreboard: |
+  **Scoreboard**
+  --------------
+default_max: |
+ A champion is crowned when either player reaches a target number of wins.
+ 
+custom_max?: |
+  To set your own target win goal, enter a number between 1 and 10.
+
+  
+  => Otherwise, press 'enter' to continue!
+
+invalid_max: |
+  Invalid input: Enter a number between 1 and 10 or press 'enter'.
+
+congrats: |
+         **************************************
+         Congratulations! You are the Champion!
+         **************************************
