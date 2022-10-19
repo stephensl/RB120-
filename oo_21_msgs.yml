@@ -1,0 +1,85 @@
+welcome: "Welcome to the Launch School Casino!"
+ask_review_rules: |
+  The game is 21.
+
+  => Would you like to review the rules? (y/n)
+invalid_yes_no: "Invalid input. Please enter 'y' or 'n'."
+no_rules: "Sounds like you already know the rules, let's get started!"
+rules: |
+  Here's how it works:
+
+  In a game of 21, there are two participants: player and dealer.
+
+  The objective is to create a hand that is closest to 21, without going over.
+
+  1. Player Bets
+    - Player places a bet for the current hand.
+
+  2. Initial Deal
+    - Each participant is dealt two cards.
+    - Player is able to see only one of the dealer's cards.
+
+  3. Review Hand
+    - Player calculates point value of hand (sum of card values).
+    - Card Values:
+      - (2-10) => numeric value of card.
+      - (Jack, Queen, King) => 10.
+      - (Ace) => may be 11 or 1.
+
+  4. Player Turn
+    - Player may choose to:
+      - 'hit' => receive another card, which is added to total.
+      - 'stay' => keep current total and move to dealer turn.
+
+      - if player decides to 'hit' and hand total is greater than 21,
+        the player 'busts' and the dealer wins automatically.
+
+  5. Dealer Turn
+    - Dealer then chooses to hit or stay.
+      - Dealer must 'hit' if total is less than 17.
+      - Dealer 'stays' if total is 17 or higher.
+      - If dealer 'busts', player wins.
+
+  6. Compare Hands
+    - If no player 'busts' and each has chosen to 'stay',
+      - Hand totals are compared, and closest to 21 wins.
+
+  7. Pay or Get Paid
+    - If player wins, player collects payment equal to bet.
+    - If player loses, player must surrender bet.
+
+
+
+  => Press 'enter' to continue.
+ask_bankroll: |
+  How much money would you like to add to your wallet?
+
+  => Enter any amount greater than 0. (ex. 100)
+
+
+invalid_amount: "Sorry, please enter a whole number greater than 0."
+start_first_hand: "Time to place a bet and start the game!"
+dealing: "Dealing cards..."
+ask_wager: "How much would you like to wager?"
+hit_or_stay?: |
+  Would you like to hit or stay?
+
+
+  => Enter 'h' to hit or 's' to stay.
+
+invalid_hit_stay: "Invalid input. Please enter 'h' or 's'."
+chose_hit: "You chose to hit..dealing card..."
+rebuy?: |
+  It looks like you've run out of chips.
+
+  => Would you like to add money to your wallet? (y/n)
+
+    - Enter 'y' to replenish funds.
+
+    - Enter 'n' to call it a night and exit casino.
+ask_play_again?: |
+  Would you like to play another hand? (y/n)
+
+    - Enter 'y' to place bet and start new hand.
+
+    - Enter 'n' to cash out and exit the casino.
